@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #965CF5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8A5FF4;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* 3D Coding Animation Styles */
+.coding-workspace {
+  position: relative;
+  perspective: 1000px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.monitor {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(150, 92, 245, 0.2);
+  transform: rotateX(5deg) rotateY(-5deg);
+  border: 3px solid #965CF5;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background: #0a0e1a;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #965CF5;
+}
+
+.code-lines {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #FDFAF6;
+}
+
+.line {
+  margin-bottom: 8px;
+  animation: typeWriter 4s steps(40) infinite;
+}
+
+.line.indent {
+  padding-left: 20px;
+}
+
+@keyframes typeWriter {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.keyword { color: #ff79c6; }
+.variable { color: #50fa7b; }
+.function { color: #8be9fd; }
+.string { color: #f1fa8c; }
+.operator { color: #ff79c6; }
+.brackets { color: #f8f8f2; }
+
+.cursor {
+  display: inline-block;
+  background-color: #FDFAF6;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.element {
+  position: absolute;
+  background: linear-gradient(135deg, #965CF5, #8A5FF4);
+  color: #FDFAF6;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  animation: orbit 20s linear infinite;
+  box-shadow: 0 4px 15px rgba(150, 92, 245, 0.3);
+}
+
+.element.react {
+  animation-delay: 0s;
+  top: -30px;
+  left: 50px;
+}
+
+.element.js {
+  animation-delay: -4s;
+  top: 100px;
+  right: -40px;
+}
+
+.element.css {
+  animation-delay: -8s;
+  bottom: -30px;
+  left: 100px;
+}
+
+.element.html {
+  animation-delay: -12s;
+  top: 50px;
+  left: -40px;
+}
+
+.element.node {
+  animation-delay: -16s;
+  bottom: 80px;
+  right: -30px;
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .monitor {
+    width: 300px;
+    height: 200px;
+    padding: 15px;
+  }
+  
+  .code-lines {
+    font-size: 12px;
+  }
+  
+  .element {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #965CF5, #8A5FF4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-hover:hover::before {
+  left: 100%;
+}
