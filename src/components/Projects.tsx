@@ -10,7 +10,7 @@ const Projects = () => {
       liveLink: 'http://netfilx-clone-pi.vercel.app',
       sourceCode: 'https://github.com/codewithdipeshh/codewithdipeshh',
       hosting: 'Vercel',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://img.etimg.com/thumb/width-1600,height-900,imgsize-508841,resizemode-75,msid-84013290/magazines/panache/netflix-india-is-getting-its-first-dating-reality-show-irl-in-real-love.jpg',
     },
     {
       name: 'E-Commerce Hub',

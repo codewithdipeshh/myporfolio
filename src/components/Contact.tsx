@@ -55,6 +55,7 @@ const Contact = () => {
                     required
                     className="w-full pl-10 pr-4 py-3 border border-[#0B1D51]/20 rounded-lg focus:ring-2 focus:ring-[#965CF5] focus:border-transparent outline-none transition-all duration-300"
                     placeholder="Enter your name"
+                    autoComplete="name"
                   />
                 </div>
               </div>
@@ -74,6 +75,7 @@ const Contact = () => {
                     required
                     className="w-full pl-10 pr-4 py-3 border border-[#0B1D51]/20 rounded-lg focus:ring-2 focus:ring-[#965CF5] focus:border-transparent outline-none transition-all duration-300"
                     placeholder="Enter your email"
+                    autoComplete="email"
                   />
                 </div>
               </div>
