@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Linkedin, Github, Send, User, MessageSquare } from 'lucide-react';
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
