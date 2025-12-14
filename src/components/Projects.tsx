@@ -8,9 +8,9 @@ const Projects = () => {
       description: 'A responsive front-end clone of Netflix designed to mimic the UI and user experience of the original platform. Includes modern layout, hover effects, and a mobile-friendly design.',
       technologies: ['HTML5', 'CSS3'],
       liveLink: 'http://netfilx-clone-pi.vercel.app',
-      sourceCode: 'https://github.com/codewithdipeshh/codewithdipeshh',
+      sourceCode: 'https://github.com/codewithdipeshh/netfilx.clone',
       hosting: 'Vercel',
-      image: 'https://img.etimg.com/thumb/width-1600,height-900,imgsize-508841,resizemode-75,msid-84013290/magazines/panache/netflix-india-is-getting-its-first-dating-reality-show-irl-in-real-love.jpg',
+      image: 'https://cdn.mos.cms.futurecdn.net/7npJW7oQSdk8qw3RkN4SGM.jpg',
     },
     {
       name: 'E-Commerce Hub',

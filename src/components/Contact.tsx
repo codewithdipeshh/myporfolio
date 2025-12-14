@@ -1,21 +1,46 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mail, Linkedin, Github, Send, User, MessageSquare } from 'lucide-react';
 
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+const Contact: React.FC = () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  
+  setIsSubmitting(true);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  try {
+    const result = await emailjs.sendForm(
+      'service_dacg4xl',          // Your service ID
+      'template_ibvkspt',         // Your template ID
+      e.currentTarget,            // The actual HTML form element
+      'WaK3Myd5oNHoMvFo6'         // Your public key
+    );
+
+    const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message! I will get back to you soon.');
     setFormData({ name: '', email: '', message: '' });
   };
+    console.log('EmailJS result:', result);
+    alert("Message sent successfully! I'll get back to you soon.");
+    setFormData({ name: '', email: '', message: '' });
+  } catch (error: any) {
+    console.error('EmailJS Error:', error?.text || error);
+    alert('Failed to send message. Please check console.');
+  }
+
+  setIsSubmitting(false);
+};
+const [formData, setFormData] = useState({
+    name: '', 
+    email: '',
+    message: ''
+  });
+  const [focusedField, setFocusedField] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({

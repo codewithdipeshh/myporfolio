@@ -66,7 +66,7 @@ const Hero = () => {
               </button>
               
               <a
-                href="#"
+                href="https://publuu.com/flip-book/973143/2138069"
                 className="bg-transparent border-2 border-[#8A5FF4] text-[#8A5FF4] px-8 py-4 rounded-xl font-semibold hover:bg-[#8A5FF4]/10 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
               >
                 <Download size={20} />
