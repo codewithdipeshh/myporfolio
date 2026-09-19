@@ -1,4 +1,5 @@
 import { ExternalLink, Github, Monitor } from 'lucide-react';
+import ecommerce  from '../asstes/images/ecommerce.png'
 
 interface Project {
   name: string;
@@ -21,14 +22,29 @@ const projects: Project[] = [
     hosting: 'Vercel',
     image: 'https://cdn.mos.cms.futurecdn.net/7npJW7oQSdk8qw3RkN4SGM.jpg',
   },
-  {
-    name: 'E-Commerce Hub',
-    description:
-      'A fully functional e-commerce storefront with product management and Stripe payment integration.',
-    technologies: ['HTML', 'CSS', 'Django', 'PostgreSQL', 'Stripe API'],
-    sourceCode: 'https://github.com/codewithdipeshh/codewithdipeshh',
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-  },
+ {
+  name: 'Bagru Cotton Feb',
+  description:
+    'A full-stack saree e-commerce platform with product management, secure authentication, Razorpay payments, Cloudinary image management, and an admin dashboard.',
+  technologies: [
+    'React',
+    'Vite',
+    'TypeScript',
+    'Redux Toolkit',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+    'Mongoose',
+    'Razorpay',
+    'Cloudinary',
+    'JWT',
+    'REST API'
+  ],
+  liveLink: 'https://bagrucottonfeb.com/',
+  sourceCode: 'https://github.com/codewithdipeshh/BagruCottonFeb',
+  hosting: 'Hostinger',
+  image: ecommerce,
+},
 ];
 
 const Projects = () => {

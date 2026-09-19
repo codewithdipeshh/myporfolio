@@ -337,7 +337,7 @@ const Hero = () => {
               </button>
 
               <a
-                href="https://publuu.com/flip-book/973143/2138069"
+                href="https://drive.google.com/file/d/1PtUbL1ByEX_gSyQR7LokdcIMmNmVUCpT/view?pli=1"
                 className="dvhero__btn dvhero__btn--outline"
               >
                 <Download size={17} />
